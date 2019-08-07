@@ -4,5 +4,8 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
-end
+  def new
+    @place = Place.new
+  end
 
+end

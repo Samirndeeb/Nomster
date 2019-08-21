@@ -3,7 +3,9 @@
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
-  
+
+<% if @place.latitude.present? && @place.longitude.present? %>
+
   <script>
 
     function initMap() {
@@ -27,6 +29,10 @@
   </script>
 
   <div id="map"></div>
+
+<% end %>
+
+<br />
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>

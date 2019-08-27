@@ -20,6 +20,19 @@
     </div>
   <% end %>
 
+  <% if place.photos.present? %>
+    <div>
+      <blockquote>
+        <% if place.photo.last.present? %>
+        <% place.photos.each do |photo| %>
+          <%= image_tag photo.picture.to_s, :height => "150px" %>
+          <% end %>
+        <% end %>
+      </blockquote>
+     </div>
+  <% end %>
+
+
   </div>
 <% end %>
 

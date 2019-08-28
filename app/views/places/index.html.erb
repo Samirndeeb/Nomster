@@ -23,7 +23,7 @@
   <% if place.photos.present? %>
     <div class="col-12">
       <blockquote>
-        <% if place.photo.last.present? %>
+        <% if place.photos.last.present? %>
         <% place.photos.each do |photo| %>
           <%= image_tag photo.picture.to_s, :height => "150px" %>
           <% end %>
